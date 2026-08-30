@@ -1,0 +1,53 @@
+name: Build MRS
+
+on:
+  push:
+    paths:
+      - "customize.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download Mihomo
+        shell: bash
+        run: |
+          VERSION=$(curl -s https://api.github.com/repos/MetaCubeX/mihomo/releases/latest | \
+            grep '"tag_name":' | \
+            head -1 | \
+            cut -d '"' -f 4)
+
+          echo "Mihomo version: $VERSION"
+
+          wget -q \
+            "https://github.com/MetaCubeX/mihomo/releases/download/${VERSION}/mihomo-linux-amd64-compatible-${VERSION}.gz" \
+            -O mihomo.gz
+
+          gunzip mihomo.gz
+          chmod +x mihomo
+
+      - name: Convert TXT to MRS
+        run: |
+          ./mihomo convert-ruleset domain yaml customize.txt customize.mrs
+
+      - name: Commit MRS
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add customize.mrs
+
+          if git diff --cached --quiet; then
+            echo "No changes to customize.mrs"
+          else
+            git commit -m "Update customize.mrs"
+            git push
+          fi
