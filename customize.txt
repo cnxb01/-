@@ -163,9 +163,9 @@ payload:
 
   - '+.xnxx-cdn.*'
 
-  - '+.pximg.net.*'
+  - '+.pximg.*'
 
-  - '+.scihead.com.*'
+  - '+.scihead.*'
 
 
 	
