@@ -165,7 +165,7 @@ payload:
 
   - '+.pximg.net.*'
 
-
+  - '+.scihead.com.*'
 
 
 	
