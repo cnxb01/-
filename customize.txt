@@ -1,4 +1,6 @@
 payload:
+  - '+.uaa1234.com'
+
   - '+.rosefile.net'
 
   - '+.github-do.panbaidu.cn'
