@@ -2,7 +2,6 @@ payload:
   - '+.uaa1234.com'
   - '+.uaa010.com'
   - '+.uameta.ai'
-  - '+.uaa.com'
   - '+.uaa202410.com'
 
   - '+.rosefile.net'
