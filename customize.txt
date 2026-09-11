@@ -1,5 +1,9 @@
 payload:
   - '+.uaa1234.com'
+  - 'cdn.uaa010.com'
+  - 'cdn.uameta.ai'
+  - 'cdn.uaa.com'
+  - 'cdn.uaa202410.com'
 
   - '+.rosefile.net'
 
