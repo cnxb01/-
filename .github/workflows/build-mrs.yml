@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "customize.txt"
+      - "customize_ip.txt"
   workflow_dispatch:
 
 permissions:
@@ -37,9 +38,10 @@ jobs:
       - name: Convert TXT to MRS
         run: |
           ./mihomo convert-ruleset domain yaml customize.txt customize.mrs
+          ./mihomo convert-ruleset ipcidr yaml customize_ip.txt customize_ip.mrs
 
       - name: Upload MRS to Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release upload 1.0 customize.mrs --clobber
+          gh release upload 1.0 customize.mrs customize_ip.mrs --clobber
