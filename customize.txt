@@ -50,7 +50,7 @@ payload:
 
   - '+.52mimoes.com'
 
-  - '+.thh521.com'
+  - '+.thh19.com'
 
   - '+.mcsns.net'
 
