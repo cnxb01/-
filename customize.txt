@@ -3,7 +3,7 @@ payload:
   - '+.uaa010.com'
   - '+.uameta.ai'
   - '+.uaa202410.com'
-
+  - 'uploadgig.com'
   - '+.rosefile.net'
 
   - '+.github-do.panbaidu.cn'
