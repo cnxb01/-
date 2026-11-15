@@ -8,7 +8,6 @@ payload:
   - '+.windhawk.net'
   - '+.github-do.panbaidu.cn'
   - 'pc.sysbbs.com'
-  - '+.edge4K'
 
   - '+.hentai-cosplay-xxx.com'
 
