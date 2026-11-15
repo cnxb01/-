@@ -5,7 +5,7 @@ payload:
   - '+.uaa202410.com'
   - 'uploadgig.com'
   - '+.rosefile.net'
-  - 'windhawk.net'
+  - '+.windhawk.net'
   - '+.github-do.panbaidu.cn'
 
   - '+.edge4K'
